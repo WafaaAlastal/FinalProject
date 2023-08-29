@@ -75,6 +75,8 @@ while True:
     if choice == 1:
         name1 = input("*Enter member name : ")
         email1 = input("*Enter member email : ")
+        while email1.find("@") == -1:
+            email1 = input("Invalid input! Please enter the Email again : ")
         level1 = input("*Enter the member level (A/B/C): ")
         while not (
                 level1.lower() == "a" or level1.upper() == "A" or level1.lower() == "b" or level1.upper() == "B" or level1.lower() == "c" or level1.upper() == "C"):
@@ -168,9 +170,12 @@ while True:
             print("Member or Book not Found !!")
 
     elif choice == 9:
-        print(" ******************* Your Welcome :)******************* ")
-        print("**By : Wafaa Alastal\n       Suhaib Jalambo\n********************(Thank You!!) Eng.Ghydaa:)********************")
+        welcome = " Your Welcome Everyone :) "
+        print(welcome.center(100,"*"))
+        by = "**By : Wafaa Alastal and Suhaib Jalambo"
+        print(by.center(100,"*"))
+        eng = " Thank You Eng,Ghydaa :)  "
+        print(eng.center(100,"*"))
         break
-
     else:
        print("Invalid choice. Please select a valid option.")
