@@ -5,8 +5,6 @@ class Book:
         self.author = author
         self.level = level
         self.available = True
-
-
 class Member:
     def __init__(self, member_id, name, email, level):
         self.member_id = member_id
@@ -14,8 +12,6 @@ class Member:
         self.email = email
         self.level = level
         self.borrowed_books = []
-
-
 class Library:
     def __init__(self):
         self.books = []
@@ -51,10 +47,7 @@ class Library:
             if book.book_id == book_id:
                 return book
         return None
-
-
 library = Library()
-
 welcome = "Welcome to the Library System"
 print(welcome.center(100, "-"))
 choices = ''' 
@@ -68,7 +61,6 @@ choices = '''
 8.Return Book 
 9.Exit 
 '''
-
 while True:
     print(choices)
     choice = int(input("Enter Your Choice : "))
