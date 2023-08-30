@@ -110,6 +110,10 @@ while True:
 
         if member_to_delete:
             library.members.remove(member_to_delete)
+            new_member_id = 1
+            for remaining_member in library.members:
+                remaining_member.member_id = new_member_id
+                new_member_id += 1
             print("# Member deleted successfully.")
         else:
             print("MemberID Not Found!!")
